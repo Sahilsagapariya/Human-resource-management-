@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react"
 import PropTypes from "prop-types"
-import { Link,useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { isEmpty } from "lodash"
 import "bootstrap/dist/css/bootstrap.min.css"
 import TableContainer from "../../components/Common/TableContainerCopy"
@@ -59,7 +59,7 @@ import DeleteModal from "../../components/Common/DeleteModal"
 
 const data = [
   {
-    image:user7,
+    image: user7,
     id: 1,
     employeName: "sahil sagapariya",
     email: "sahilsgapariya@gmail.com",
@@ -94,7 +94,7 @@ const data = [
     Status: "Active",
   },
   {
-    image:user1,
+    image: user1,
     id: 4,
     employeName: "chirag kothiya",
     email: "chiregkothiya@gmail.com",
@@ -105,7 +105,7 @@ const data = [
     Status: "Active",
   },
   {
-    image:user2,
+    image: user2,
     id: 5,
     employeName: "avni rupareliya",
     email: "aavnirupareliya@gmail.com",
@@ -128,7 +128,7 @@ const data = [
   },
   {
     image:
-     user4,
+      user4,
     id: 7,
     employeName: "sruti patoliya",
     email: "shrutipatel@gmail.com",
@@ -274,6 +274,7 @@ function DatatableTables() {
 
   return (
     <React.Fragment>
+
       <DeleteModal
         show={deleteModal}
         onDeleteClick={handleDeleteCustomer}
@@ -336,7 +337,7 @@ function DatatableTables() {
                   </div>
                 </form>
               </Col>
-              <Col md="2">  
+              <Col md="2">
                 <Link className="top-btn pb-3 btn-invoice" to="/my-account">
                   <div>
                     <i className="uil-plus"></i>
@@ -374,7 +375,7 @@ DatatableTables.propTypes = {
 }
 
 export default DatatableTables
- 
+
 const EmployeeName = cell => {
   return (
     <Link
@@ -398,8 +399,8 @@ const CustomerStatus = cell => {
             (cell.value === "Active"
               ? "success"
               : "danger" && cell.value === "Inactive"
-              ? "danger"
-              : "")
+                ? "danger"
+                : "")
           }
         >
           {cell.value}
